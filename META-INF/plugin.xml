@@ -1,0 +1,41 @@
+<idea-plugin version="2">
+  <id>im.huy.nim-idea</id>
+  <name>Nim</name>
+  <version>1.0</version>
+  <vendor email="me@huy.im" url="http://huy.im">HUY</vendor>
+
+  <description><![CDATA[
+      Enter short description for your plugin here.<br>
+      <em>most HTML tags may be used</em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+  </change-notes>
+
+  <idea-version since-build="131"/>
+
+  <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <fileTypeFactory implementation="im.huy.nim.NimFileTypeFactory"/>
+  </extensions>
+
+  <application-components>
+  </application-components>
+
+  <project-components>
+  </project-components>
+
+  <actions>
+    <action id="Nim.NewFile" class="im.huy.nim.actions.NewNimFileAction">
+      <add-to-group group-id="NewGroup" anchor="after" relative-to-action="NewGroup1"/>
+    </action>
+  </actions>
+</idea-plugin>
